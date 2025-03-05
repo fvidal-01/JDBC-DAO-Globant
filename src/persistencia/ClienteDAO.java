@@ -36,7 +36,7 @@ public class ClienteDAO extends DAO{
         }
     }
 
-    public void listarTodosLosClientes() throws Exception{
+    public List<Cliente> listarTodosLosClientes() throws Exception{
         try{
             String sql = "SELECT id_cliente, nombre_contacto, apellido_contacto FROM cliente";
 
@@ -54,11 +54,8 @@ public class ClienteDAO extends DAO{
                 clientes.add(cliente);
             }
 
-            for (Cliente cli : clientes) {
-                System.out.println(cli.imprimirNombreApellido());
-            }
-            System.out.println();
             desconectarBase();
+            return clientes;
         }
         catch (Exception e){
             e.printStackTrace();
