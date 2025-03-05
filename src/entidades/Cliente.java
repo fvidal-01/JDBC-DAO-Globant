@@ -166,4 +166,8 @@ public class Cliente {
                 + pais + ", Codigo Postal: " + codigoPostal + ", ID Empleado: " + idEmpleado + ", Limite de Credito: "
                 + limiteCredito + "]";
     }
+
+    public String imprimirNombreApellido() {
+        return "Cliente: " + getNombreContacto() + " " + getApellidoContacto();
+    }
 }
